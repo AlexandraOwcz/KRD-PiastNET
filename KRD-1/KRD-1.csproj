@@ -57,11 +57,17 @@
     <Compile Include="FormAddOrEdit.Designer.cs">
       <DependentUpon>FormAddOrEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormManager.cs">
+    <Compile Include="FormManagePackages.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormManager.Designer.cs">
-      <DependentUpon>FormManager.cs</DependentUpon>
+    <Compile Include="FormManagePackages.Designer.cs">
+      <DependentUpon>FormManagePackages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManageUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageUsers.Designer.cs">
+      <DependentUpon>FormManageUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogIn.cs">
       <SubType>Form</SubType>
@@ -69,6 +75,7 @@
     <Compile Include="FormLogIn.Designer.cs">
       <DependentUpon>FormLogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Package.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
@@ -82,8 +89,11 @@
     <EmbeddedResource Include="FormAddOrEdit.resx">
       <DependentUpon>FormAddOrEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormManager.resx">
-      <DependentUpon>FormManager.cs</DependentUpon>
+    <EmbeddedResource Include="FormManagePackages.resx">
+      <DependentUpon>FormManagePackages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageUsers.resx">
+      <DependentUpon>FormManageUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

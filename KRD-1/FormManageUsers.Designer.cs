@@ -1,6 +1,6 @@
 ﻿namespace KRD_1
 {
-    partial class FormManager
+    partial class FormManageUsers
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormManager));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormManageUsers));
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.labelSearch = new System.Windows.Forms.Label();
             this.buttonAdd = new System.Windows.Forms.Button();
@@ -37,6 +37,7 @@
             this.panelSearch = new System.Windows.Forms.Panel();
             this.pictureBoxLoupe = new System.Windows.Forms.PictureBox();
             this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
+            this.buttonStatus = new System.Windows.Forms.Button();
             this.panelSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoupe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
@@ -63,25 +64,25 @@
             // 
             this.buttonAdd.Location = new System.Drawing.Point(35, 13);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(148, 40);
+            this.buttonAdd.Size = new System.Drawing.Size(110, 40);
             this.buttonAdd.TabIndex = 2;
             this.buttonAdd.Text = "Dodaj";
             this.buttonAdd.UseVisualStyleBackColor = true;
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(189, 13);
+            this.buttonEdit.Location = new System.Drawing.Point(151, 12);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(166, 40);
+            this.buttonEdit.Size = new System.Drawing.Size(101, 40);
             this.buttonEdit.TabIndex = 3;
             this.buttonEdit.Text = "Edytuj";
             this.buttonEdit.UseVisualStyleBackColor = true;
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(361, 13);
+            this.buttonDelete.Location = new System.Drawing.Point(374, 13);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(132, 40);
+            this.buttonDelete.Size = new System.Drawing.Size(119, 40);
             this.buttonDelete.TabIndex = 4;
             this.buttonDelete.Text = "Usuń";
             this.buttonDelete.UseVisualStyleBackColor = true;
@@ -118,11 +119,22 @@
             this.dataGridViewUsers.Size = new System.Drawing.Size(459, 176);
             this.dataGridViewUsers.TabIndex = 6;
             // 
-            // FormManager
+            // buttonStatus
+            // 
+            this.buttonStatus.Location = new System.Drawing.Point(258, 12);
+            this.buttonStatus.Name = "buttonStatus";
+            this.buttonStatus.Size = new System.Drawing.Size(110, 40);
+            this.buttonStatus.TabIndex = 7;
+            this.buttonStatus.Text = "Status";
+            this.buttonStatus.UseVisualStyleBackColor = true;
+            this.buttonStatus.Click += new System.EventHandler(this.buttonStatus_Click);
+            // 
+            // FormManageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 294);
+            this.Controls.Add(this.buttonStatus);
             this.Controls.Add(this.dataGridViewUsers);
             this.Controls.Add(this.panelSearch);
             this.Controls.Add(this.buttonDelete);
@@ -130,7 +142,7 @@
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.labelSearch);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormManager";
+            this.Name = "FormManageUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KRD ";
             this.panelSearch.ResumeLayout(false);
@@ -152,6 +164,7 @@
         private System.Windows.Forms.Panel panelSearch;
         private System.Windows.Forms.PictureBox pictureBoxLoupe;
         private System.Windows.Forms.DataGridView dataGridViewUsers;
+        private System.Windows.Forms.Button buttonStatus;
     }
 }
 

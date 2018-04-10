@@ -16,6 +16,8 @@ namespace KRD_1
         public FormLogIn()
         {
             InitializeComponent();
+            this.CenterToScreen();
+            // Code password
             textBoxPassword.PasswordChar = '*';
         }
 

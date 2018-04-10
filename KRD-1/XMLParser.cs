@@ -21,7 +21,7 @@ namespace KRD_1
             return true;
         }
         
-        public void XmlSerializer(List<User> listOfUsers)
+        public void SerializeListOfUsers(List<User> listOfUsers)
         {
             var serializer = new XmlSerializer(listOfUsers.GetType());
             using (var writer = new StreamWriter("listOfUsers.xml"))
@@ -30,7 +30,37 @@ namespace KRD_1
             }
         }
 
-        public void XmlDeserializer(List<User> listOfUsers)
+        // do ogarnięcia
+        public static List<Package> LoadPackages()
+        {
+            List<Package> allPackages = new List<Package>();
+            var deserializer = new XmlSerializer(allPackages.GetType());
+            try
+            {
+                using (var reader = new StreamReader("allPackages.xml"))
+                {
+                    allPackages = deserializer.Deserialize(reader) as List<Package>;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Plik nie mógł zostać odczytany:");
+                Console.WriteLine(e.Message);
+            }
+            return allPackages;
+        }
+
+        public static void ChangeStatusOfPackage(int index, String newStatus)
+        {
+            // mozna lepiej zabezpieczyc
+            XmlDocument document = new XmlDocument();
+            document.Load("allPackages.xml");
+            XmlNodeList nodeList = document.GetElementsByTagName("Status");
+            nodeList[index].InnerXml = newStatus;
+            document.Save("allPackages.xml");
+        }
+
+        public void DeserializeListOfUsers(List<User> listOfUsers)
         {
             var deserializer = new XmlSerializer(listOfUsers.GetType());
 
@@ -44,7 +74,7 @@ namespace KRD_1
                 Console.WriteLine("Plik nie mógł zostać odczytany:");
                 Console.WriteLine(e.Message);
             }
-            FormManager.listOfUsers = listOfUsers;
+            FormManageUsers.listOfUsers = listOfUsers;
         }
 
         // userAccounts.xml -> bin folder 

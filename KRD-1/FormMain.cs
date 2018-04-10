@@ -20,9 +20,15 @@ namespace KRD_1
         private void buttonManageUsers_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var formManager = new FormManager();
+            var formManager = new FormManageUsers();
             formManager.Closed += (s, args) => this.Close();
             formManager.ShowDialog();
+        }
+
+        private void buttonManagePackages_Click(object sender, EventArgs e)
+        {
+            var formPackages = new FormManagePackages();
+            formPackages.ShowDialog();
         }
     }
 }

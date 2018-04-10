@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace KRD_1
 {
-    public partial class FormManager : System.Windows.Forms.Form
+    public partial class FormManageUsers : System.Windows.Forms.Form
     {
         public static List<User> listOfUsers = new List<User>();
         DataTable dataTableOfUsers = new DataTable();
@@ -16,13 +16,13 @@ namespace KRD_1
         XMLParser xml = new XMLParser();
         
 
-        public FormManager()
+        public FormManageUsers()
         {
             InitializeComponent();
             buttonAdd.Click += OpenFormAddOrEdit_Click;
             buttonEdit.Click += OpenFormAddOrEdit_Click;
             // Loading data from xml
-            xml.XmlDeserializer(listOfUsers);
+            xml.DeserializeListOfUsers(listOfUsers);
             dataTableOfUsers.Columns.Add("Imie", typeof(String));
             dataTableOfUsers.Columns.Add("Nazwisko", typeof(String));
             dataTableOfUsers.Columns.Add("Ulica", typeof(String));
@@ -103,7 +103,12 @@ namespace KRD_1
             FormAddOrEdit form = (FormAddOrEdit)sender;
             MessageBox.Show("Zapisano zmiany...");
             FillDataGridView();
-            xml.XmlSerializer(listOfUsers);
+            xml.SerializeListOfUsers(listOfUsers);
+        }
+        
+        private void buttonStatus_Click(object sender, EventArgs e)
+        {
+            // I don't know what it should do ?
         }
     }
 }

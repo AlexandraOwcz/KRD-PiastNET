@@ -98,7 +98,7 @@ namespace KRD_1
                             Street = textBoxStreet.Text, Gender = gender,
                             Country = comboBoxCountry.SelectedItem.ToString()});
                 }
-                FormManager.listOfUsers = listOfUsers;
+                FormManageUsers.listOfUsers = listOfUsers;
                 this.Close();
             }
         }
