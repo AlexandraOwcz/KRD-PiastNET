@@ -16,7 +16,7 @@ namespace KRD_1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain());
+            Application.Run(new FormLogIn());
         }
     }
 }

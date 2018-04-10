@@ -46,5 +46,26 @@ namespace KRD_1
             }
             FormManager.listOfUsers = listOfUsers;
         }
+
+        // userAccounts.xml -> bin folder 
+        public static bool IsValidLogin(string username, string password)
+        {
+            bool isValid = false;
+            XmlDocument document = new XmlDocument();
+            Console.WriteLine("directory:" + Environment.CurrentDirectory + "\\userAccounts.xml");
+            document.Load(Environment.CurrentDirectory + "\\userAccounts.xml"); 
+            foreach (XmlNode node in document.SelectNodes("/accounts/user"))
+            {
+                String accountUsername = node.SelectSingleNode("username").InnerText;
+                String accountPassword = node.SelectSingleNode("password").InnerText;
+
+                if(username == accountUsername && password == accountPassword)
+                {
+                    isValid = true;
+                    break;
+                }
+            }
+            return isValid;
+        }
     }
 }
