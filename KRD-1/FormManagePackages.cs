@@ -15,10 +15,17 @@ namespace KRD_1
         // List of packages
         List<Package> listOfPackages = new List<Package>();
         DataTable dataTableOfPackages = new DataTable();
-        public FormManagePackages()
+        public FormManagePackages(bool loggedIn)
         {
             InitializeComponent();
             this.CenterToScreen();
+            // If user isn't logged in
+            if (!loggedIn)
+            {
+                this.Text = "Paczki";
+                buttonChangeStatus.Visible = false;
+                comboBoxChangeStatus.Visible = false;
+            } 
             listOfPackages = XMLParser.LoadPackages();
             dataTableOfPackages.Columns.Add("Id", typeof(int));
             dataTableOfPackages.Columns.Add("Status", typeof(String));

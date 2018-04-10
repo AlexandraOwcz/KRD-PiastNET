@@ -12,6 +12,7 @@ namespace KRD_1
 {
     public partial class FormLogIn : Form
     {
+        bool isLoggedIn = false;
         XMLParser parser = new XMLParser();
         public FormLogIn()
         {
@@ -46,6 +47,12 @@ namespace KRD_1
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Exclamation,
                                 MessageBoxDefaultButton.Button1);
+        }
+
+        private void buttonCheckStateOfPackages_Click(object sender, EventArgs e)
+        {
+            var formOfPackages = new FormManagePackages(isLoggedIn);
+            formOfPackages.ShowDialog();
         }
     }
 }

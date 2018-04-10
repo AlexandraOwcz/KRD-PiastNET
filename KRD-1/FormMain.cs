@@ -27,7 +27,7 @@ namespace KRD_1
 
         private void buttonManagePackages_Click(object sender, EventArgs e)
         {
-            var formPackages = new FormManagePackages();
+            var formPackages = new FormManagePackages(true);
             formPackages.ShowDialog();
         }
     }

@@ -35,12 +35,13 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.labelPassword = new System.Windows.Forms.Label();
             this.pictureBoxLock = new System.Windows.Forms.PictureBox();
+            this.buttonCheckStateOfPackages = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLock)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonLogIn
             // 
-            this.buttonLogIn.Location = new System.Drawing.Point(106, 245);
+            this.buttonLogIn.Location = new System.Drawing.Point(104, 252);
             this.buttonLogIn.Name = "buttonLogIn";
             this.buttonLogIn.Size = new System.Drawing.Size(75, 23);
             this.buttonLogIn.TabIndex = 0;
@@ -91,11 +92,22 @@
             this.pictureBoxLock.TabIndex = 5;
             this.pictureBoxLock.TabStop = false;
             // 
+            // buttonCheckStateOfPackages
+            // 
+            this.buttonCheckStateOfPackages.Location = new System.Drawing.Point(52, 306);
+            this.buttonCheckStateOfPackages.Name = "buttonCheckStateOfPackages";
+            this.buttonCheckStateOfPackages.Size = new System.Drawing.Size(178, 23);
+            this.buttonCheckStateOfPackages.TabIndex = 6;
+            this.buttonCheckStateOfPackages.Text = "Sprawdź status swojej paczki";
+            this.buttonCheckStateOfPackages.UseVisualStyleBackColor = true;
+            this.buttonCheckStateOfPackages.Click += new System.EventHandler(this.buttonCheckStateOfPackages_Click);
+            // 
             // FormLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(279, 292);
+            this.ClientSize = new System.Drawing.Size(285, 341);
+            this.Controls.Add(this.buttonCheckStateOfPackages);
             this.Controls.Add(this.pictureBoxLock);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.textBoxPassword);
@@ -119,5 +131,6 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.PictureBox pictureBoxLock;
+        private System.Windows.Forms.Button buttonCheckStateOfPackages;
     }
 }
