@@ -13,13 +13,10 @@ namespace KRD_1
     public class XMLParser
     {
         XmlSerializer xsSubmit = new XmlSerializer(typeof(User));
-        
-        public XMLParser(){}
+        List<Package> allPackages = null;
 
-        public Boolean LoadUsers()
-        {
-            return true;
-        }
+
+        public XMLParser(){}
         
         public void SerializeListOfUsers(List<User> listOfUsers)
         {
@@ -31,9 +28,9 @@ namespace KRD_1
         }
 
         // do ogarnięcia
-        public static List<Package> LoadPackages()
+        public List<Package> LoadPackages()
         {
-            List<Package> allPackages = new List<Package>();
+            allPackages = new List<Package>();
             var deserializer = new XmlSerializer(allPackages.GetType());
             try
             {
@@ -50,7 +47,7 @@ namespace KRD_1
             return allPackages;
         }
 
-        public static void ChangeStatusOfPackage(int index, String newStatus)
+        public void ChangeStatusOfPackage(int index, String newStatus)
         {
             // mozna lepiej zabezpieczyc
             XmlDocument document = new XmlDocument();
@@ -78,7 +75,7 @@ namespace KRD_1
         }
 
         // userAccounts.xml -> bin folder 
-        public static bool IsValidLogin(string username, string password)
+        public bool IsValidLogin(string username, string password)
         {
             bool isValid = false;
             XmlDocument document = new XmlDocument();

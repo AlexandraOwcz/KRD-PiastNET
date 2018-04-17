@@ -15,6 +15,7 @@ namespace KRD_1
         // List of packages
         List<Package> listOfPackages = new List<Package>();
         DataTable dataTableOfPackages = new DataTable();
+        XMLParser parser = new XMLParser();
         public FormManagePackages(bool loggedIn)
         {
             InitializeComponent();
@@ -26,7 +27,7 @@ namespace KRD_1
                 buttonChangeStatus.Visible = false;
                 comboBoxChangeStatus.Visible = false;
             } 
-            listOfPackages = XMLParser.LoadPackages();
+            listOfPackages = parser.LoadPackages();
             dataTableOfPackages.Columns.Add("Id", typeof(int));
             dataTableOfPackages.Columns.Add("Status", typeof(String));
             dataTableOfPackages.Columns.Add("Godzina", typeof(String));
@@ -50,9 +51,9 @@ namespace KRD_1
             if(comboBoxChangeStatus.SelectedIndex > -1 && (dataGridViewDisplayPackages.SelectedRows.Count == 1))
             {
                 int index = dataGridViewDisplayPackages.SelectedRows[0].Index;
-                XMLParser.ChangeStatusOfPackage(index, comboBoxChangeStatus.SelectedItem.ToString());
+                parser.ChangeStatusOfPackage(index, comboBoxChangeStatus.SelectedItem.ToString());
                 // Can be done better -> to edit
-                listOfPackages = XMLParser.LoadPackages();
+                listOfPackages = parser.LoadPackages();
                 FillDataGridView();
             }
         }

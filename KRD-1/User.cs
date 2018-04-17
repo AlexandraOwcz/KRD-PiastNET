@@ -4,12 +4,13 @@ using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace KRD_1
 {
     [Serializable()]
-    public class User : INotifyPropertyChanged
+    public class User : ICheckCorrectness
     {
         private String name = String.Empty;
         private String surname = String.Empty;
@@ -23,8 +24,9 @@ namespace KRD_1
             set {
                 if (value != this.name)
                 {
-                    this.name = value;
-                    NotifyPropertyChanged();
+                    if(ContainsOnlyLetters(value))
+                        this.name = value;
+
                 }
             }
         }
@@ -34,8 +36,8 @@ namespace KRD_1
             {
                 if (value != this.surname)
                 {
-                    this.surname = value;
-                    NotifyPropertyChanged();
+                    if(ContainsOnlyLetters(value))
+                        this.surname = value;
                 }
             }
         }
@@ -45,8 +47,8 @@ namespace KRD_1
             {
                 if (value != this.street)
                 {
-                    this.street = value;
-                    NotifyPropertyChanged();
+                    if(ContainsOnlyLetters(value))
+                        this.street = value;
                 }
             }
         }
@@ -57,7 +59,6 @@ namespace KRD_1
                 if (value != this.gender)
                 {
                     this.gender = value;
-                    NotifyPropertyChanged();
                 }
             }
         }
@@ -67,23 +68,22 @@ namespace KRD_1
             {
                 if (value != this.country)
                 {
-                    this.country = value;
-                    NotifyPropertyChanged();
+                    if(ContainsOnlyLetters(value))
+                        this.country = value;
                 }
             }
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        // This method is called by the Set accessor of each property.
-        // The CallerMemberName attribute that is applied to the optional propertyName
-        // parameter causes the property name of the caller to be substituted as an argument.
-        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
+        
+        public bool ContainsNumber(string text)
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
+            bool containsAnyNumber = text.Any(char.IsDigit);
+            return containsAnyNumber;
+        }
+
+        public bool ContainsOnlyLetters(string text)
+        {
+            bool containsOnlyLetters = Regex.IsMatch(text, @"^[a-zA-Z]+$");
+            return containsOnlyLetters;
         }
     }
 }

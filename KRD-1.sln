@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KRD-1", "KRD-1\KRD-1.csproj", "{5A34B60D-C0D6-4C4F-BC0D-EFD33CCB058F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KRD-1Tests", "KRD-1Tests\KRD-1Tests.csproj", "{B169EB33-7403-42AB-9EB5-53FDCD1A747A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5A34B60D-C0D6-4C4F-BC0D-EFD33CCB058F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A34B60D-C0D6-4C4F-BC0D-EFD33CCB058F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A34B60D-C0D6-4C4F-BC0D-EFD33CCB058F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B169EB33-7403-42AB-9EB5-53FDCD1A747A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B169EB33-7403-42AB-9EB5-53FDCD1A747A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B169EB33-7403-42AB-9EB5-53FDCD1A747A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B169EB33-7403-42AB-9EB5-53FDCD1A747A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
