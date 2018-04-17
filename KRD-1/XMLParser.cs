@@ -12,16 +12,24 @@ namespace KRD_1
 {
     public class XMLParser
     {
-        XmlSerializer xsSubmit = new XmlSerializer(typeof(User));
-        List<Package> allPackages = null;
-
+        List<Package> allPackages = new List<Package>();
+        XmlDocument document = new XmlDocument();
+        
+        private String userAccountsFileName = "userAccounts.xml";
+        private String listOfUsersFileName = "listOfUsers.xml";
+        private String allPackagesFileName = "allPackages.xml";
+        private String userAccountsPath = Environment.CurrentDirectory + "\\userAccounts.xml";
+        public String UserAccountsFileName { get; set; }
+        public String ListOfUsersFileName { get; set; }
+        public String AllPackagesFileName { get; set; }
+        public String UserAccountsPath { get; set; }
 
         public XMLParser(){}
         
         public void SerializeListOfUsers(List<User> listOfUsers)
         {
             var serializer = new XmlSerializer(listOfUsers.GetType());
-            using (var writer = new StreamWriter("listOfUsers.xml"))
+            using (var writer = new StreamWriter(listOfUsersFileName))
             {
                 serializer.Serialize(writer, listOfUsers);
             }
@@ -30,11 +38,10 @@ namespace KRD_1
         // do ogarnięcia
         public List<Package> LoadPackages()
         {
-            allPackages = new List<Package>();
             var deserializer = new XmlSerializer(allPackages.GetType());
             try
             {
-                using (var reader = new StreamReader("allPackages.xml"))
+                using (var reader = new StreamReader(allPackagesFileName))
                 {
                     allPackages = deserializer.Deserialize(reader) as List<Package>;
                 }
@@ -48,21 +55,19 @@ namespace KRD_1
         }
 
         public void ChangeStatusOfPackage(int index, String newStatus)
-        {
-            // mozna lepiej zabezpieczyc
-            XmlDocument document = new XmlDocument();
-            document.Load("allPackages.xml");
+        { 
+            document.Load(allPackagesFileName);
             XmlNodeList nodeList = document.GetElementsByTagName("Status");
             nodeList[index].InnerXml = newStatus;
-            document.Save("allPackages.xml");
+            document.Save(allPackagesFileName);
         }
 
-        public void DeserializeListOfUsers(List<User> listOfUsers)
+        public List<User> DeserializeListOfUsers(List<User> listOfUsers)
         {
             var deserializer = new XmlSerializer(listOfUsers.GetType());
 
             try {
-                using (var reader = new StreamReader("listOfUsers.xml"))
+                using (var reader = new StreamReader(listOfUsersFileName))
                 {
                     listOfUsers = deserializer.Deserialize(reader) as List<User>;
                 }
@@ -71,16 +76,17 @@ namespace KRD_1
                 Console.WriteLine("Plik nie mógł zostać odczytany:");
                 Console.WriteLine(e.Message);
             }
+            // poprawić na zwracanie i wtedy mozna sprawdzić 
             FormManageUsers.listOfUsers = listOfUsers;
+            return listOfUsers;
         }
 
         // userAccounts.xml -> bin folder 
         public bool IsValidLogin(string username, string password)
         {
             bool isValid = false;
-            XmlDocument document = new XmlDocument();
             Console.WriteLine("directory:" + Environment.CurrentDirectory + "\\userAccounts.xml");
-            document.Load(Environment.CurrentDirectory + "\\userAccounts.xml"); 
+            document.Load(userAccountsPath); 
             foreach (XmlNode node in document.SelectNodes("/accounts/user"))
             {
                 String accountUsername = node.SelectSingleNode("username").InnerText;
