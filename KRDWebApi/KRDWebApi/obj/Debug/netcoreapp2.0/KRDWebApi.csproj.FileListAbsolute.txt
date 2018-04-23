@@ -1,0 +1,11 @@
+C:\Users\Olcza\source\repos\KRDWebApi\KRDWebApi\bin\Debug\netcoreapp2.0\KRDWebApi.deps.json
+C:\Users\Olcza\source\repos\KRDWebApi\KRDWebApi\bin\Debug\netcoreapp2.0\KRDWebApi.runtimeconfig.json
+C:\Users\Olcza\source\repos\KRDWebApi\KRDWebApi\bin\Debug\netcoreapp2.0\KRDWebApi.runtimeconfig.dev.json
+C:\Users\Olcza\source\repos\KRDWebApi\KRDWebApi\bin\Debug\netcoreapp2.0\KRDWebApi.dll
+C:\Users\Olcza\source\repos\KRDWebApi\KRDWebApi\bin\Debug\netcoreapp2.0\KRDWebApi.pdb
+C:\Users\Olcza\source\repos\KRDWebApi\KRDWebApi\obj\Debug\netcoreapp2.0\KRDWebApi.csprojResolveAssemblyReference.cache
+C:\Users\Olcza\source\repos\KRDWebApi\KRDWebApi\obj\Debug\netcoreapp2.0\KRDWebApi.csproj.CoreCompileInputs.cache
+C:\Users\Olcza\source\repos\KRDWebApi\KRDWebApi\obj\Debug\netcoreapp2.0\KRDWebApi.AssemblyInfoInputs.cache
+C:\Users\Olcza\source\repos\KRDWebApi\KRDWebApi\obj\Debug\netcoreapp2.0\KRDWebApi.AssemblyInfo.cs
+C:\Users\Olcza\source\repos\KRDWebApi\KRDWebApi\obj\Debug\netcoreapp2.0\KRDWebApi.dll
+C:\Users\Olcza\source\repos\KRDWebApi\KRDWebApi\obj\Debug\netcoreapp2.0\KRDWebApi.pdb
