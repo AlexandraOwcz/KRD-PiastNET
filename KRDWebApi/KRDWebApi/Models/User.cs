@@ -18,7 +18,7 @@ namespace KRDWebApi.Models
         [Required(ErrorMessage = "Surname is required")]
         public String Surname { get; set; }
         public String Street { get; set; }
-        public Char Gender { get; set; }
+        public String Gender { get; set; }
         public String Country { get; set; }
     }
 }

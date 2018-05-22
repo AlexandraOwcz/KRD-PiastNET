@@ -127,7 +127,7 @@ namespace KRDWebApi.Controllers
             user.Name = Request.Form["Name"];
             user.Surname = Request.Form["Surname"];
             user.Street = Request.Form["Street"];
-            user.Gender = Char.Parse(Request.Form["Gender"]);
+            user.Gender = Request.Form["Gender"];
             user.Country = Request.Form["Country"];
             _userRepository.EditUser(id, user);
             return RedirectToAction("GetAllUsers");

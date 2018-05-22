@@ -17,7 +17,7 @@ namespace KRDWebApi
                     Name = "Jasia",
                     Surname = "Kowalska",
                     Street = "Kwiatowa 6",
-                    Gender = 'K',
+                    Gender = "K",
                     Country = "Poland"
                 },
                 new User()
@@ -26,7 +26,7 @@ namespace KRDWebApi
                     Name = "Zbigniew",
                     Surname = "Boniek",
                     Street = "Pilsudskiego 10",
-                    Gender = 'M',
+                    Gender = "M",
                     Country = "Poland"
                 },
                 new User()
@@ -35,7 +35,7 @@ namespace KRDWebApi
                     Name = "Elzbieta",
                     Surname = "Krzak",
                     Street = "Lipowa 6",
-                    Gender = 'K',
+                    Gender = "K",
                     Country = "Poland"
                 }
         };
