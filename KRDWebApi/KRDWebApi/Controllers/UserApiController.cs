@@ -9,19 +9,22 @@ using Microsoft.AspNetCore.Mvc;
 namespace KRDWebApi.Controllers
 {
     [Route("api/[controller]")]
-    public class PackageController : Controller
+    public class UserApiController : Controller
     {
         private readonly DatabaseContext _context;
-        public PackageController(DatabaseContext context)
+        public UserApiController(DatabaseContext context)
         {
             _context = context;
-            if (_context.Packages.Count() == 0)
+            if (_context.Users.Count() == 0)
             {
-                _context.Packages.Add(
-                    new Package
+                _context.Users.Add(
+                    new User
                     {
-                        Status = "dostarczono",
-                        Hour = "12 AM"
+                        Name = "Bolek",
+                        Surname = "Wałęsa",
+                        Street = "Kwiatkowskiego 6",
+                        Gender = "M",
+                        Country = "Poland"
                     }
                 );
                 _context.SaveChanges();
@@ -30,16 +33,15 @@ namespace KRDWebApi.Controllers
 
         [HttpGet]
         [Route("[action]")]
-        public IActionResult GetAll()
+        public IActionResult Get()
         {
-            // zrób serwisy do tego 
-            return Content(_context.Packages.ToList().ToString());
+            return Content(_context.Users.ToList().ToString());
         }
-        
-        [HttpGet("{id}", Name = "GetPackage")]
+
+        [HttpGet("{id}", Name = "GetUser")]
         public IActionResult GetById(int id)
         {
-            var item = _context.Packages.Find(id);
+            var item = _context.Users.Find(id);
             if (item == null)
             {
                 return NotFound();
@@ -49,51 +51,53 @@ namespace KRDWebApi.Controllers
 
         [HttpPost]
         [Route("[action]")]
-        public IActionResult Post([FromBody] Package item)
+        public IActionResult Post([FromBody] User user)
         {
-            if (item == null)
+            if (user == null)
             {
                 return BadRequest();
             }
 
-            _context.Packages.Add(item);
+            _context.Users.Add(user);
             _context.SaveChanges();
 
-            return CreatedAtRoute("GetPackage", new { id = item.Id }, item);
+            return CreatedAtRoute("GetUser", new { id = user.Id }, user);
         }
-        
+
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] Package item)
+        public IActionResult Put(int id, [FromBody] User item)
         {
             if (item == null || item.Id != id)
             {
                 return BadRequest();
             }
 
-            var package = _context.Packages.Find(id);
-            if (package == null)
+            var user = _context.Users.Find(id);
+            if (user == null)
             {
                 return NotFound();
             }
+            user.Name = item.Name;
+            user.Surname = item.Surname;
+            user.Street = item.Street;
+            user.Gender = item.Gender;
+            user.Country = item.Country;
 
-            package.Status = item.Status;
-            package.Hour = item.Hour;
-
-            _context.Packages.Update(package);
+            _context.Users.Update(user);
             _context.SaveChanges();
             return NoContent();
         }
-        
+
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var package = _context.Packages.Find(id);
-            if (package == null)
+            var user = _context.Users.Find(id);
+            if (user == null)
             {
                 return NotFound();
             }
 
-            _context.Packages.Remove(package);
+            _context.Users.Remove(user);
             _context.SaveChanges();
             return NoContent();
         }
