@@ -12,3 +12,17 @@ C:\Users\Olcza\source\repos\KRDWebApi\KRDWebApi.Tests\obj\Debug\netcoreapp2.0\KR
 C:\Users\Olcza\source\repos\KRDWebApi\KRDWebApi.Tests\obj\Debug\netcoreapp2.0\KRDWebApi.Tests.AssemblyInfo.cs
 C:\Users\Olcza\source\repos\KRDWebApi\KRDWebApi.Tests\obj\Debug\netcoreapp2.0\KRDWebApi.Tests.dll
 C:\Users\Olcza\source\repos\KRDWebApi\KRDWebApi.Tests\obj\Debug\netcoreapp2.0\KRDWebApi.Tests.pdb
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi.Tests\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi.Tests\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi.Tests\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi.Tests\bin\Debug\netcoreapp2.0\KRDWebApi.Tests.deps.json
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi.Tests\bin\Debug\netcoreapp2.0\KRDWebApi.Tests.runtimeconfig.json
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi.Tests\bin\Debug\netcoreapp2.0\KRDWebApi.Tests.runtimeconfig.dev.json
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi.Tests\bin\Debug\netcoreapp2.0\KRDWebApi.Tests.dll
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi.Tests\bin\Debug\netcoreapp2.0\KRDWebApi.Tests.pdb
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi.Tests\obj\Debug\netcoreapp2.0\KRDWebApi.Tests.csprojAssemblyReference.cache
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi.Tests\obj\Debug\netcoreapp2.0\KRDWebApi.Tests.csproj.CoreCompileInputs.cache
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi.Tests\obj\Debug\netcoreapp2.0\KRDWebApi.Tests.AssemblyInfoInputs.cache
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi.Tests\obj\Debug\netcoreapp2.0\KRDWebApi.Tests.AssemblyInfo.cs
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi.Tests\obj\Debug\netcoreapp2.0\KRDWebApi.Tests.dll
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi.Tests\obj\Debug\netcoreapp2.0\KRDWebApi.Tests.pdb

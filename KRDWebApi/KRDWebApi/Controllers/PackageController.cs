@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace KRDWebApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/PackageController")]
     public class PackageController : Controller
     {
         private readonly DatabaseContext _context;
@@ -29,7 +29,7 @@ namespace KRDWebApi.Controllers
         }
 
         [HttpGet]
-        [Route("[action]")]
+        [Route("All")]
         public IActionResult GetAll()
         {
             // zrób serwisy do tego 
@@ -47,8 +47,7 @@ namespace KRDWebApi.Controllers
             return Ok(item);
         }
 
-        [HttpPost]
-        [Route("[action]")]
+        [HttpPost("AddPackage")]
         public IActionResult Post([FromBody] Package item)
         {
             if (item == null)
@@ -62,7 +61,7 @@ namespace KRDWebApi.Controllers
             return CreatedAtRoute("GetPackage", new { id = item.Id }, item);
         }
         
-        [HttpPut("{id}")]
+        [HttpPut("Update/{id:int}")]
         public IActionResult Put(int id, [FromBody] Package item)
         {
             if (item == null || item.Id != id)
@@ -84,7 +83,7 @@ namespace KRDWebApi.Controllers
             return NoContent();
         }
         
-        [HttpDelete("{id}")]
+        [HttpDelete("Delete/{id}")]
         public IActionResult Delete(int id)
         {
             var package = _context.Packages.Find(id);

@@ -5729,26 +5729,23 @@
   },
   "packageFolders": {
     "C:\\Users\\Olcza\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Olcza\\source\\repos\\KRDWebApi\\KRDWebApi.Tests\\KRDWebApi.Tests.csproj",
+      "projectUniqueName": "D:\\Git_workspace\\KRD-PiastNET\\KRDWebApi\\KRDWebApi.Tests\\KRDWebApi.Tests.csproj",
       "projectName": "KRDWebApi.Tests",
-      "projectPath": "C:\\Users\\Olcza\\source\\repos\\KRDWebApi\\KRDWebApi.Tests\\KRDWebApi.Tests.csproj",
+      "projectPath": "D:\\Git_workspace\\KRD-PiastNET\\KRDWebApi\\KRDWebApi.Tests\\KRDWebApi.Tests.csproj",
       "packagesPath": "C:\\Users\\Olcza\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Olcza\\source\\repos\\KRDWebApi\\KRDWebApi.Tests\\obj\\",
+      "outputPath": "D:\\Git_workspace\\KRD-PiastNET\\KRDWebApi\\KRDWebApi.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\Olcza\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"

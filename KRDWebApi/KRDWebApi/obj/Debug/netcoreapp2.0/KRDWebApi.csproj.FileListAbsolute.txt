@@ -20,3 +20,14 @@ D:\Git_workspace\KRD-PiastNET-master\KRD-PiastNET-master\KRDWebApi\KRDWebApi\obj
 D:\Git_workspace\KRD-PiastNET-master\KRD-PiastNET-master\KRDWebApi\KRDWebApi\obj\Debug\netcoreapp2.0\KRDWebApi.AssemblyInfo.cs
 D:\Git_workspace\KRD-PiastNET-master\KRD-PiastNET-master\KRDWebApi\KRDWebApi\obj\Debug\netcoreapp2.0\KRDWebApi.dll
 D:\Git_workspace\KRD-PiastNET-master\KRD-PiastNET-master\KRDWebApi\KRDWebApi\obj\Debug\netcoreapp2.0\KRDWebApi.pdb
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi\obj\Debug\netcoreapp2.0\KRDWebApi.csprojAssemblyReference.cache
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi\obj\Debug\netcoreapp2.0\KRDWebApi.csproj.CoreCompileInputs.cache
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi\obj\Debug\netcoreapp2.0\KRDWebApi.AssemblyInfoInputs.cache
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi\obj\Debug\netcoreapp2.0\KRDWebApi.AssemblyInfo.cs
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi\obj\Debug\netcoreapp2.0\KRDWebApi.dll
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi\obj\Debug\netcoreapp2.0\KRDWebApi.pdb
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi\bin\Debug\netcoreapp2.0\KRDWebApi.deps.json
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi\bin\Debug\netcoreapp2.0\KRDWebApi.runtimeconfig.json
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi\bin\Debug\netcoreapp2.0\KRDWebApi.runtimeconfig.dev.json
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi\bin\Debug\netcoreapp2.0\KRDWebApi.dll
+D:\Git_workspace\KRD-PiastNET\KRDWebApi\KRDWebApi\bin\Debug\netcoreapp2.0\KRDWebApi.pdb

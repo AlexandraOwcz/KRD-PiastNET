@@ -13281,11 +13281,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Git_workspace\\KRD-PiastNET-master\\KRD-PiastNET-master\\KRDWebApi\\KRDWebApi\\KRDWebApi.csproj",
+      "projectUniqueName": "D:\\Git_workspace\\KRD-PiastNET\\KRDWebApi\\KRDWebApi\\KRDWebApi.csproj",
       "projectName": "KRDWebApi",
-      "projectPath": "D:\\Git_workspace\\KRD-PiastNET-master\\KRD-PiastNET-master\\KRDWebApi\\KRDWebApi\\KRDWebApi.csproj",
+      "projectPath": "D:\\Git_workspace\\KRD-PiastNET\\KRDWebApi\\KRDWebApi\\KRDWebApi.csproj",
       "packagesPath": "C:\\Users\\Olcza\\.nuget\\packages\\",
-      "outputPath": "D:\\Git_workspace\\KRD-PiastNET-master\\KRD-PiastNET-master\\KRDWebApi\\KRDWebApi\\obj\\",
+      "outputPath": "D:\\Git_workspace\\KRD-PiastNET\\KRDWebApi\\KRDWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
