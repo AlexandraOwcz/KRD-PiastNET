@@ -30,13 +30,13 @@ namespace KRDWebApi.Controllers
 
         [HttpGet]
         [Route("All")]
-        public IActionResult GetAll()
+        public JsonResult GetAll()
         {
             // zrób serwisy do tego 
-            return Content(_context.Packages.ToList().ToString());
+            return Json(_context.Packages.ToList());
         }
         
-        [HttpGet("{id}", Name = "GetPackage")]
+        [HttpGet("Get/{id}", Name = "GetPackage")]
         public IActionResult GetById(int id)
         {
             var item = _context.Packages.Find(id);
@@ -61,7 +61,7 @@ namespace KRDWebApi.Controllers
             return CreatedAtRoute("GetPackage", new { id = item.Id }, item);
         }
         
-        [HttpPut("Update/{id:int}")]
+        [HttpPut("Update/{id}")]
         public IActionResult Put(int id, [FromBody] Package item)
         {
             if (item == null || item.Id != id)
